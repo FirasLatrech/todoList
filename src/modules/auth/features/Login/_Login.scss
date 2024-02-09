@@ -1,0 +1,36 @@
+.login-module {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f5f9;
+
+  .login-card-container {
+    width: 420px;
+    padding: 32px 22px;
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    .title {
+      font-size: 22px;
+    }
+
+    .link {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 475px) {
+    .login-card-container {
+      width: 85%;
+    }
+  }
+}

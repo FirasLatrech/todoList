@@ -1,0 +1,98 @@
+@use '../../assets/styles/base';
+@use '../../assets/styles/abstracts' as *;
+
+.input-form {
+  width: 100%;
+
+  .label {
+    font-size: 14px;
+    font-weight: 400;
+
+    .red-star {
+      font-size: 12px;
+      color: $danger;
+      vertical-align: top;
+    }
+  }
+
+  .error-message {
+    margin-left: 4px;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    color: $danger;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    min-height: 32px;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 2px;
+    width: 100%;
+
+    .input {
+      outline: none;
+      width: 100%;
+      border: 0;
+      background-color: transparent;
+    }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .eye-icon {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+  }
+
+  .input-rounded {
+    border-radius: 8px;
+  }
+
+  $size: (
+    sm: 6px 0,
+    md: 10px 0,
+    lg: 14px 0,
+    xl: 18px 0,
+  );
+
+  @each $key, $value in $size {
+    .input-#{$key} {
+      padding: $value;
+    }
+  }
+
+  $color: (
+    light: $light,
+    primary: $primary,
+    info: $info,
+    success: $success,
+    danger: $danger,
+    warning: $warning,
+    dark: $dark,
+    secondary: $secondary,
+  );
+
+  @each $key, $value in $color {
+    .input-#{$key} {
+      color: $value;
+      @if $key == 'secondary' or $key == 'light' {
+        color: $dark;
+      } @else {
+        color: $value;
+      }
+    }
+    .input-container-#{$key} {
+      border: 1px solid $value;
+    }
+  }
+}

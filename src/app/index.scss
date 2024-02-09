@@ -1,0 +1,6 @@
+@use '../modules/shared/assets/styles/base';
+@use '../modules/shared/assets/styles/abstracts' as *;
+
+@use '../modules' as *;
+
+@forward './dark.scss';

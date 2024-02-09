@@ -1,0 +1,19 @@
+@use '../modules/shared/assets/styles/base';
+@use '../modules/shared/assets/styles/abstracts' as *;
+
+#dark {
+  background-color: #0d1116;
+
+  .main-layout-outlet,
+  .sidebar-items,
+  .navbar,
+  .sidebar-content {
+    background-color: #1e232b;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .sidebar {
+      background-color: #1e232b;
+    }
+  }
+}
