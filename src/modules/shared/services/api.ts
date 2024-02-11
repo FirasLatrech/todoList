@@ -3,7 +3,7 @@
 import { FetchArgs, createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
 import { clearTokens, setTokens } from '@src/modules/auth/utils/token'
 import axiosInstance from '../utils/axios'
-import { localStorageAdapter } from '../utils/LocalStorageAdapter'
+import { localStorageAdapter } from '../utils/localStorageAdapter'
 
 const baseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_APP_BASE_URL as string,

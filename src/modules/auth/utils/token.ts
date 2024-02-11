@@ -1,4 +1,4 @@
-import { localStorageAdapter } from '@src/modules/shared/utils/LocalStorageAdapter'
+import { localStorageAdapter } from '@src/modules/shared/utils/localStorageAdapter'
 
 export const getTokens = () => {
   return {

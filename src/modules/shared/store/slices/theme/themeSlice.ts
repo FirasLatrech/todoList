@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { localStorageAdapter } from '@src/modules/shared/utils/LocalStorageAdapter'
+import { localStorageAdapter } from '@src/modules/shared/utils/localStorageAdapter'
 
 const getTheme = () => {
   return localStorageAdapter?.get('theme') || 'light'
