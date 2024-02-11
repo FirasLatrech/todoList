@@ -13,6 +13,7 @@ import { logout } from '@src/modules/auth/data/authThunk'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import Dropdown from '../DropDown/DropDown'
+import CustomAvatar from '../Avatar/Avatar'
 
 interface INavbarProps {
   setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
@@ -80,9 +81,8 @@ const Navbar: React.FC<INavbarProps> = ({
       key: '1',
       label: (
         <div className="user-info-container">
-          <Avatar size={32} className="navbar-avatar">
-            TG
-          </Avatar>
+          <CustomAvatar image={null} text="User" size={40} />
+
           <div className="navbar-account-info">
             <p className="sidebar-accountinfo-item">tarekgzgz@gmail.com</p>
             <p>Role: Admin</p>
@@ -139,9 +139,7 @@ const Navbar: React.FC<INavbarProps> = ({
           placement="bottomRight"
           triggerElement={
             <button onClick={() => setIsSettingOpen(true)} className="navbar-avatar-btn">
-              <Avatar size={32} className="navbar-avatar">
-                TG
-              </Avatar>
+              <CustomAvatar image={null} text="User" size={40} />
             </button>
           }
         ></Dropdown>
