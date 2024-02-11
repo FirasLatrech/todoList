@@ -36,10 +36,14 @@
 
   .navbar-right {
     display: flex;
-    justify-content: flex-end;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: center;
     gap: 22px;
+    .navbar-avatar-btn {
+      cursor: pointer;
+      background-color: unset;
+    }
   }
 
   @media only screen and (max-width: 1024px) {
@@ -60,7 +64,8 @@
   justify-content: flex-start;
   align-items: center;
   gap: 12px;
-
+  cursor: pointer;
+  background-color: unset;
   .navbar-flag {
     width: 22px;
   }
