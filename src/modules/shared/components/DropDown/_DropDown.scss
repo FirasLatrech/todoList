@@ -27,6 +27,8 @@
     .dropdown-item {
         padding: 12px 16px;
         cursor: pointer;
+        display: flex;
+        gap: 5px;
         &:hover {
             background-color: #f1f1f1;
         }

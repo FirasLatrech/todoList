@@ -1,7 +1,7 @@
 import menuIcon from '../../assets/icons/navbar/menu.svg'
 import { useLocation } from 'react-router-dom'
 import ThemeButton from '../ThemeButton/ThemeButton'
-import { Avatar, Button, Space } from 'antd'
+import { Avatar } from 'antd'
 import enFlagIcon from '../../assets/icons/Navbar/en-flag.png'
 import frFlagIcon from '../../assets/icons/Navbar/fr-flag.png'
 import arFlagIcon from '../../assets/icons/Navbar/ar-flag.png'
@@ -79,7 +79,7 @@ const Navbar: React.FC<INavbarProps> = ({
     {
       key: '1',
       label: (
-        <Space>
+        <div className="user-info-container">
           <Avatar size={32} className="navbar-avatar">
             TG
           </Avatar>
@@ -87,7 +87,7 @@ const Navbar: React.FC<INavbarProps> = ({
             <p className="sidebar-accountinfo-item">tarekgzgz@gmail.com</p>
             <p>Role: Admin</p>
           </div>
-        </Space>
+        </div>
       ),
       disabled: true,
       onClick: () => console.log('user info'),

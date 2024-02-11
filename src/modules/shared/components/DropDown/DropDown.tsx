@@ -1,9 +1,10 @@
-import React, { useState, useRef, useEffect, ReactElement } from 'react'
+import React, { useRef, useEffect, ReactElement } from 'react'
 export interface DropdownItem {
   key?: string
   label?: string | ReactElement
   onClick: () => void
   disabled?: boolean
+  icon?: ReactElement
 }
 
 export interface DropdownProps {
@@ -21,7 +22,6 @@ const Dropdown: React.FC<DropdownProps> = ({
   isOpen,
   setIsOpen,
 }) => {
-  //   const [isOpen, setIsOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                 setIsOpen(false)
               }}
             >
-              {item.label}
+              {item?.icon} {item.label}
             </div>
           ))}
         </div>
