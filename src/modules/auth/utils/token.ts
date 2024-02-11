@@ -1,18 +1,20 @@
+import { localStorageAdapter } from '@src/modules/shared/utils/LocalStorageAdapter'
+
 export const getTokens = () => {
   return {
-    access_token: localStorage.getItem('access_token') || null,
-    refresh_token: localStorage.getItem('refresh_token') || null,
+    access_token: localStorageAdapter.get('access_token') || null,
+    refresh_token: localStorageAdapter.get('refresh_token') || null,
   }
 }
 
 export const setTokens = (access_token: string, refresh_token?: string | null) => {
-  localStorage.setItem('access_token', access_token)
+  localStorageAdapter.set('access_token', access_token)
   if (refresh_token) {
-    localStorage.setItem('refresh_token', refresh_token)
+    localStorageAdapter.set('refresh_token', refresh_token)
   }
 }
 
 export const clearTokens = () => {
-  localStorage.removeItem('access_token')
-  localStorage.removeItem('refresh_token')
+  localStorageAdapter.remove('access_token')
+  localStorageAdapter.remove('refresh_token')
 }
