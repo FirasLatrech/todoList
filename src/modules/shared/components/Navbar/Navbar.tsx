@@ -1,7 +1,6 @@
 import menuIcon from '../../assets/icons/navbar/menu.svg'
 import { useLocation } from 'react-router-dom'
 import ThemeButton from '../ThemeButton/ThemeButton'
-import { Avatar } from 'antd'
 import enFlagIcon from '../../assets/icons/Navbar/en-flag.png'
 import frFlagIcon from '../../assets/icons/Navbar/fr-flag.png'
 import arFlagIcon from '../../assets/icons/Navbar/ar-flag.png'
