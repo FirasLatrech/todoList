@@ -11,13 +11,17 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@casl/ability": "^6.5.0",
     "@reduxjs/toolkit": "^1.9.5",
     "accessible-nprogress": "^2.1.2",
     "antd": "^5.5.2",
     "axios": "^1.4.0",
+    "clipboard": "^2.0.11",
     "date-fns": "^2.30.0",
     "formik": "^2.4.2",
     "husky": "^8.0.3",
@@ -35,6 +39,14 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.13",
+    "@storybook/addon-interactions": "^7.6.13",
+    "@storybook/addon-links": "^7.6.13",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.13",
+    "@storybook/react": "^7.6.13",
+    "@storybook/react-vite": "^7.6.13",
+    "@storybook/test": "^7.6.13",
     "@types/node": "^20.2.5",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
@@ -45,6 +57,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
     "prettier": "3.0.0",
+    "storybook": "^7.6.13",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vite-plugin-svgr": "^3.2.0"
