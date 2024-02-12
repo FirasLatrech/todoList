@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Ability, AbilityTuple, MongoAbility, MongoQuery } from '@casl/ability';
-
-import { useAppDispatch, useAppSelector } from '../hooks/redux';
+import { useAppDispatch, useAppSelector } from '../store';
 import { defineAbilitiesFor } from '../utils/defineAbilitiesFor';
 
 type AbilityContextType = {
@@ -39,10 +38,11 @@ export const AbilityContextProvider = ({ children }: Props) => {
     let ability: MongoAbility<AbilityTuple, MongoQuery> = defineAbilitiesFor(
       [],
     );
-    const isSuperAdmin = user.roles.some(
+    const isSuperAdmin =user.roles.some(
       (role: { name: string }) => role.name === 'super-admin',
     );
     if (isSuperAdmin) {
+      //for testing
       ability = defineAbilitiesFor('admin');
     } else {
       const permissions: string[] = Array.from(
