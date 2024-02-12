@@ -14,20 +14,23 @@
     align-items: center;
     gap: 25px;
     min-height: 75px;
-    background: #506bcc;
-    border-radius: 10px;
-    color: #ffffff;
+    margin-bottom: 50px;
     user-select: none;
-    font-size: 25px;
+    margin-top: 25px;
+    img {
+      max-width: 200px;
+    }
   }
 
   .sidebar-content {
     height: 100%;
     background: #fafafa;
     box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid rgb(231, 231, 231);
+    border-left: 1px solid rgb(231, 231, 231);
+
     justify-content: flex-start;
 
     .sidebar-nav-items {
@@ -51,14 +54,5 @@
 @media only screen and (max-width: 1024px) {
   .sidebar {
     background-color: white;
-    border-radius: 0 12px 12px 0;
-
-    .sidebar-logo-container {
-      border-radius: 0 10px 0 0;
-    }
-
-    .sidebar-content {
-      border-radius: 0 0 10px 0;
-    }
   }
 }

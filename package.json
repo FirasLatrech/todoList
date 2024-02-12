@@ -16,7 +16,6 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "accessible-nprogress": "^2.1.2",
-    "antd": "^5.5.2",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "formik": "^2.4.2",
