@@ -83,7 +83,7 @@ const Navbar: React.FC<INavbarProps> = ({
           <CustomAvatar image={null} text="User" size={40} />
 
           <div className="navbar-account-info">
-            <p className="sidebar-accountinfo-item">tarekgzgz@gmail.com</p>
+            <p className="sidebar-accountinfo-item">user@gmail.com</p>
             <p>Role: Admin</p>
           </div>
         </div>
@@ -133,9 +133,9 @@ const Navbar: React.FC<INavbarProps> = ({
       <div className="navbar-right">
         <Dropdown
           isOpen={isSettingOpen}
+          placement={i18n?.language === 'ar' ? 'bottomLeft' : 'bottomRight'}
           setIsOpen={setIsSettingOpen}
           items={accountInfoItems}
-          placement="bottomRight"
           triggerElement={
             <button onClick={() => setIsSettingOpen(true)} className="navbar-avatar-btn">
               <CustomAvatar image={null} text="User" size={40} />
@@ -147,7 +147,7 @@ const Navbar: React.FC<INavbarProps> = ({
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           items={languagesItems}
-          placement="bottomRight"
+          placement={i18n?.language === 'ar' ? 'bottomLeft' : 'bottomRight'}
           triggerElement={
             <button className="navbar-flag-container" onClick={() => setIsOpen(true)}>
               <img

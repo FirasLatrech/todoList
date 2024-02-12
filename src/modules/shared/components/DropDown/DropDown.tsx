@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, ReactElement } from 'react'
+import { ReactElement, useEffect, useRef } from 'react'
 export interface DropdownItem {
   key?: string
   label?: string | ReactElement
@@ -14,7 +14,6 @@ export interface DropdownProps {
   isOpen: boolean
   setIsOpen: any
 }
-
 const Dropdown: React.FC<DropdownProps> = ({
   items,
   placement = 'bottomRight',
@@ -35,29 +34,28 @@ const Dropdown: React.FC<DropdownProps> = ({
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [])
+  }, [setIsOpen])
 
   return (
     <div className="dropdown" ref={dropdownRef}>
       {triggerElement}
-      {isOpen && (
-        <div className={`dropdown-menu ${placement}`}>
-          {items.map((item) => (
-            <div
-              key={item.key}
-              className="dropdown-item"
-              onClick={() => {
+      <div className={`dropdown-menu ${placement} ${isOpen ? 'visible' : ''}`}>
+        {items.map((item) => (
+          <div
+            key={item.key}
+            className={`dropdown-item ${item.disabled ? 'disabled' : ''}`}
+            onClick={() => {
+              if (!item.disabled) {
                 item.onClick()
                 setIsOpen(false)
-              }}
-            >
-              {item?.icon} {item.label}
-            </div>
-          ))}
-        </div>
-      )}
+              }
+            }}
+          >
+            {item.icon} {item.label}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
-
 export default Dropdown
