@@ -25,9 +25,6 @@ The developer is not free to choose his own architecture and starter; he should 
 The quality and consistency of code are more important that the developer freedom, but we welcome any suggestion that will ameliorate there guidelines.
 If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit described why you want to update or add guideline
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
 ## General Development Guidelines
 
@@ -825,3 +822,18 @@ To directly clone the project just use our command "npx create-softy-app ./{fold
     - Ensure that you have a ticket assigned to you before starting any task 
     - Ensure that your ticket has the tester and the reviewer (for code review) assigned as watchers
     - Ensure you answer the daily questions 
+
+# Helpful Links and Resources
+
+- Nadia makarevich "advanced react"
+
+https://github.com/kudos-dude/react-best-practices
+
+https://github.com/learning-zone/react-basics/blob/master/best-practices.md
+
+https://github.com/MarsBased/handbook/blob/master/guides/development/react-guidelines.md
+
+https://google.github.io/styleguide/tsguide.html
+
+https://google.github.io/styleguide/jsguide.html
+
