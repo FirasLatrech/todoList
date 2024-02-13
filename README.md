@@ -77,7 +77,8 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
  ### Comments
 
-    Use comment only to explain some decision, ....
+    - Use comment only to explain some decision, architecture that cannot be explained in code
+    - For information (to be refactored, ...) 
 
 ### Code Standards Guidelines
 
@@ -822,4 +823,4 @@ Feature-based structure: In this approach, code is organized based on applicatio
     - Make sure that you have a ticket assigned to you before starting any task 
     - Make sure that your ticket has the tester and the reviewer member (code review) as watchers in your ticket.
     - Add the merge request link to your ticket
-    - Make sure to daily answer the three questions in TAM
+    - Make sure to daily answer the questions
