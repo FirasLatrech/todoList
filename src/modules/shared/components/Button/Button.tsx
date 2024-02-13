@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
-interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps extends HTMLAttributes<HTMLButtonElement> {
   icon?: string
   label?: string
   variant?: 'primary' | 'info' | 'success' | 'danger' | 'warning' | 'dark' | 'secondary' | 'light'
