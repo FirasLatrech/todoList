@@ -32,8 +32,7 @@ If you have any amelioration or suggestion you should create a suggestion/new-u
 
      - Minimize Http requests, duplicated calls
 
-    - Minimize Component Renders: Optimize your components to render only when necessary :
-      Loading only the necessary resources on-demand
+    - Minimize Component Renders: Optimize your components to render only when necessary
 
     - Lazy Loading: Utilize React.lazy and Suspense to lazily load components that are not immediately required. This can improve 
       the perceived performance of your application by deferring the loading of non-essential components until they are needed.
