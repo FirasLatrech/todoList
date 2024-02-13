@@ -4,15 +4,22 @@
 
 These guidelines are destined for all front-end developers in SoftyLines.
 
-The first step any new developer should take before starting on a production project is to read these guidelines and use only the company starters.
+The first step any new developer should take before starting on a production project is to read these guidelines and use only the 
+
+company starters.
 
 You should not create your own starter for a production project.
 
 These guidelines allow us to :
- - Ensure consistent code quality across all our projects
- - Facilitate collaboration among multiple developers working on the same codebase
- -
- -....
+
+ - Ensure consistent code quality across all our projects by following the same coding standards and practices
+ 
+ - Facilitate collaboration among multiple developers working on the same codebase. This makes it easier for developers even to  
+
+   review each other's code, debug issues, and onboard new team members
+
+ - Serve as a reference point for understanding the project structure, coding conventions, and development workflows,... 
+ 
 
 ## Contributing
 
