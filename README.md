@@ -52,8 +52,8 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
    "Don't use testers as bug catchers"
 
-   - Is your responsability to test your code on different devices and with different cases to catch issues and bugs before 
-     committing
+   Is your responsability to test your code on different devices and with different cases to catch issues and bugs before 
+   committing
   
  
   ### Editor
@@ -74,11 +74,11 @@ To make it easy for you to get started with GitLab, here's a list of recommended
     
     If you find yourself duplicating any code that has already been defined elsewhere in the codebase, take the opportunity to refactor it in a way that ensures there's only a single representation of that code throughout
 
- ### Separation of Concerns
-
 
  ### Comments
+
     Use comment only to explain some decision, ....
+
 ### Code Standards Guidelines
 
   ### React
@@ -671,26 +671,71 @@ const sampleComponent = () => {
 
   ### CSS/SCSS
 
-    - Utilise BEM
-
-    - Use short hex values where applicable, e.g. #fff instead of #ffffff
+    - Use the naming convention followed in the starter, do not use other rules.
 
     - Use SCSS variables (like colors) appropriately to ensure you code is kept DRY
-        example
-    
+
+        // no
+          h3 {
+            color: white;
+          }
+
+          // yes
+          $white: #fff;
+
+          h3 {
+            color: $white;
+          }
+
+      
     - Each selector and style declaration should be on its own line to help with Git diffs and error reporting.
-        example
+
+      // good
+          h3,
+          .title,
+           {
+            color: blue;
+          }
+
+          // not so good
+          h3, .title {
+            color: blue
+          }
         
-    - Avoid inline CSS
-        example
-
-    - Use shorthand properties
-
     - Write colours in lowercase
 
     - Use whitespace to aid readability. Anything which modifies the context such as a selector or a media query should be preceded with a blank line
+        
+        // bad
+          .foo {
+            color: $blue;
+            @media screen and (min-width: 1000px) { 
+              color: $yellow;
+            }
+            .bar {
+              color: $red;
+              @media screen and (min-width: 1000px) { 
+                color: $green;
+              }
+            }    
+          }
 
-    - See about units
+          // good
+            .foo {
+              color: $blue;
+
+              @media screen and (min-width: 1000px) { 
+                color: $yellow;
+              }
+
+              .bar {
+                color: $red;
+
+                @media screen and (min-width: 1000px) { 
+                  color: $green;
+                }
+              }
+            }
 
   ### Packages
 
