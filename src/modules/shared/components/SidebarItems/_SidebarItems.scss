@@ -14,7 +14,7 @@
     align-items: center;
     gap: 12px;
     height: 50px;
-    color: #4f68c7;
+    color: #b485ff;
     padding: 12px 15px 8px 15px;
     border-radius: 8px;
     cursor: pointer;
@@ -23,13 +23,13 @@
     overflow: hidden;
 
     .icon_color {
-      color: #4f68c7;
+      color: #b485ff;
       padding-bottom: 3px;
     }
 
     &:hover {
-      background-color: #f1f5f9;
-      color: #4f68c7;
+      background-color: #f4effc;
+      color: #b485ff;
 
       .icon_color {
         color: white;
@@ -38,11 +38,11 @@
   }
 
   .active {
-    background-color: #4f68c7;
+    background-color: #b485ff;
     color: white;
 
     &:hover {
-      background-color: #4f68c7;
+      background-color: #b485ff;
       color: white;
 
       .icon_color {
@@ -56,7 +56,7 @@
   }
 
   .link-icon-stroke-color {
-    stroke: #4f68c7;
+    stroke: #b485ff;
   }
 
   .link-icon-stroke-color-active {
