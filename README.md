@@ -29,24 +29,35 @@ To make it easy for you to get started with GitLab, here's a list of recommended
   ### Performance
 
     - Minimize Http requests, duplicated calls
+    - Forbid Refreshing the whole page even for a small change => Loading only the necessary resources on-demand
     - Lazy loading
+    - Using appropriate image formats (e.g., SVG, WebP)
+
     - ....
 
   ### Testing 
 
    "a developer who is good at testing is a good developer"
+
    "Don't use testers as bug catchers"
+
    - Is your responsability to test your code on different devices and with different cases to catch issues and bugs before 
      committing
   
  
   ### Editor
 
+  ### Code line length
+    Code lines shouldn't be so long that they require horizontal scrolling to read (long lines need to be breaking)
+
 ## General Coding Rules
 
  ### Write a readable code
     "keep it simple, stupid"
  ### Don't Repeat yourself (DRY)
+
+ ### Separation of Concerns
+
 
  ### Comments
     Use comment only to explain some decision, ....
@@ -55,7 +66,9 @@ To make it easy for you to get started with GitLab, here's a list of recommended
   ### React
     - Component max size
     - Don't use semi-colons - javascript doesn't require them
+    - Level of nested folders
     - .....
+
 
   ### CSS/SCSS
 
@@ -90,7 +103,9 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
   - Minimalism: Avoid adding too many external dependencies unnecessarily. Each additional package increases the complexity of your project and introduces potential points of failure
 
- # Starter Architecture
+ # Project structure 
+
+Feature-based structure: In this approach, code is organized based on application features or modules. Each feature has its own folder containing all the related files, including HTML, CSS, and TypeScript. This structure helps in better separation of concerns and enables teams to work on different features independently.
 
 /my-react-app                                                                                                                                 
 |-- /.husky                     # Husky directory to manage Git hooks
@@ -134,4 +149,26 @@ To make it easy for you to get started with GitLab, here's a list of recommended
     |-- vite-env.d.ts           # TypeScript declaration file for Vite environment variables
 
 
+# Git and branches
 
+  ## naming
+    - feature branches: These branches are used for developing new features or making changes to existing features. Feature branches 
+      should be created off of the develop branch and should be named using the following convention: feature/<feature-name>
+    - hotFix branches: these branches are for hotfixes in the prod (urgent fixes) hotFix/<fix-issue>
+  ## workflow
+    - The typical Git workflow for this project will involve the following steps:
+        a. Pull the development branch: if it is a new feature always update your local develop branch with the remote changes and fix conflicts that exist. If it is a hotFix pull the specific branch (master/develop/staging) and fix conflicts if they exist.
+        b. Create a feature branch: When starting work on a new feature or bug fix, create a new feature branch off of the main development feature (master or develop branch) using the naming convention described above.
+        c. Work on the feature: Make the necessary changes to the code to implement the new feature or fix the bug. Commit to your changes regularly.
+        d. Commit and Push branch: Don't commit the pre-push scripts. Fix all the eslint issues. Be sure that all the texts are translated into the three languages. No console log is allowed.
+        f. Create a merge request: When you have finished working on the feature, create a merge request to merge your changes into the develop branch.
+        g. Fix conflicts: if there are conflicts while creating a merge request, merge the development branch into your current branch fix conflicts, and push the branch with a clear commit like “update feature with develop”
+        h. Testing: After a pull request is created, run the tests and check if everything is ok. Make sure that everything is working before updating the task status to “to be tested”
+        i. Code review: The merge request will be reviewed by another member of the team.
+    ❌ Don't work on the same branch for a long time. Each task has it is own branch
+    
+   ## TAM
+    - Make sure that you have a ticket assigned to you before starting any task 
+    - Make sure that your ticket has the tester and the reviewer member (code review) as watchers in your ticket.
+    - Add the merge request link to your ticket
+    - Make sure to daily answer the three questions in TAM
