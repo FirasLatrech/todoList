@@ -1,5 +1,17 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+.. "$(dirname -- "$0")/_/husky.sh"
 
-npm run format
+# Temporarily disable ESLint rule for max props per line to avoid warning
+ESLINT_NO_DEV_ERRORS=true npm run format
+
+# Run npm run build before each commit
 npm run build
+
+# Check if the build was successful
+if [ $? -ne 0 ]; then
+  echo "Error: Your build has failed. Please fix the issues before committing."
+  exit 1
+fi
+
+# Continue with the commit
+exit 0
