@@ -23,7 +23,7 @@ These guidelines allow us to :
 
 The developer is constrained from selecting a new project structure; adherence to guidelines is mandatory.
 While prioritizing code quality and consistency over developer autonomy, we value and encourage suggestions for enhancing our guidelines.
-If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit described why you want to update or add guideline.
+If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit describing why you want to update or add guidelines.
 
 
 ## General Development Guidelines
