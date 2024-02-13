@@ -11,6 +11,7 @@ export interface DropdownProps {
   items: DropdownItem[]
   placement?: 'bottomRight' | 'bottomLeft'
   triggerElement?: ReactElement
+  overlay?:ReactElement
   isOpen: boolean
   setIsOpen: any
 }
@@ -20,6 +21,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   triggerElement,
   isOpen,
   setIsOpen,
+  overlay
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -38,24 +40,28 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-      {triggerElement}
-      <div className={`dropdown-menu ${placement} ${isOpen ? 'visible' : ''}`}>
-        {items.map((item) => (
+    {triggerElement}
+    <div className={`dropdown-menu ${placement} ${isOpen ? 'visible' : ''}`}>
+      {overlay ? (
+        overlay
+      ) : (
+        items?.map((item) => (
           <div
             key={item.key}
             className={`dropdown-item ${item.disabled ? 'disabled' : ''}`}
             onClick={() => {
               if (!item.disabled) {
-                item.onClick()
-                setIsOpen(false)
+                item.onClick();
+                setIsOpen(false);
               }
             }}
           >
             {item.icon} {item.label}
           </div>
-        ))}
-      </div>
+        ))
+      )}
     </div>
+  </div>
   )
 }
 export default Dropdown

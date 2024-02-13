@@ -1,4 +1,4 @@
-import ModalExample from '../components/ModalExample'
+import ModalExample from '@src/modules/dashboard/components/ModalExample'
 import { useAppDispatch, useAppSelector } from '../store'
 import { closeModal } from '../store/slices/modals/modalsSlice'
 
