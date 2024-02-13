@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import MainLayout from '@src/modules/shared/layout/MainLayout/MainLayout'
-import AuthGuard from '@src/modules/shared/guards/AuthGuard'
+// import AuthGuard from '@src/modules/shared/guards/AuthGuard'
 import { RouteProps } from 'react-router-dom'
 import { Fragment, lazy } from 'react'
 
