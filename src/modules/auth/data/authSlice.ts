@@ -8,6 +8,7 @@ export interface AuthState {
   isAuthenticated: boolean
   isInitialised: boolean
   user: {
+    roles: any
     id: string
     name: string
     email: string
