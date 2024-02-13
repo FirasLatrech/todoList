@@ -21,9 +21,9 @@ These guidelines allow us to :
 
 ## Contributing
 
-The developer is not free to choose a new porject structure, he should follow the guidelines.
-The quality and consistency of code are more important that the developer freedom, but we welcome any suggestion that will ameliorate there guidelines.
-If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit described why you want to update or add guideline
+The developer is constrained from selecting a new project structure; adherence to guidelines is mandatory.
+While prioritizing code quality and consistency over developer autonomy, we value and encourage suggestions for enhancing our guidelines.
+If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit described why you want to update or add guideline.
 
 
 ## General Development Guidelines
