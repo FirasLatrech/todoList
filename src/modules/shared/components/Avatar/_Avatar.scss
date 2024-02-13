@@ -1,0 +1,15 @@
+.custom-avatar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+    color: #333;
+    font-size: 25px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
