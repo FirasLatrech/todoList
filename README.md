@@ -21,7 +21,7 @@ These guidelines allow us to :
 
 ## Contributing
 
-The developer is not free to choose his own architecture and starter; he should follow the guidelines.
+The developer is not free to choose a new porject structure, he should follow the guidelines.
 The quality and consistency of code are more important that the developer freedom, but we welcome any suggestion that will ameliorate there guidelines.
 If you have any amelioration or suggestion you should create a suggestion/new-update-name branch with a detailed commit described why you want to update or add guideline
 
