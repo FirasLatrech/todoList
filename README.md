@@ -65,7 +65,8 @@ If you have any amelioration or suggestion you should create a suggestion/new-u
 
  ### Don't Repeat yourself (DRY)
     
-    If you find yourself duplicating any code that has already been defined elsewhere in the codebase, take the opportunity to refactor it in a way that ensures there's only a single representation of that code throughout
+    If you find yourself duplicating any code that has already been defined elsewhere in the codebase, 
+    take the opportunity to refactor it in a way that ensures there's only a single representation of that code throughout
 
 
  ### Comments
