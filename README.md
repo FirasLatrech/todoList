@@ -5,7 +5,6 @@
 These guidelines are destined for all front-end developers in SoftyLines.
 
 The first step any new developer should take before starting on a production project is to read these guidelines and use only the 
-
 company starters.
 
 You should not create your own starter for a production project.
@@ -13,9 +12,8 @@ You should not create your own starter for a production project.
 These guidelines allow us to :
 
  - Ensure consistent code quality across all our projects by following the same coding standards and practices
- 
- - Facilitate collaboration among multiple developers working on the same codebase. This makes it easier for developers even to  
 
+ - Facilitate collaboration among multiple developers working on the same codebase. This makes it easier for developers even to  
    review each other's code, debug issues, and onboard new team members
 
  - Serve as a reference point for understanding the project structure, coding conventions, and development workflows,... 
@@ -36,11 +34,14 @@ To make it easy for you to get started with GitLab, here's a list of recommended
   ### Performance
 
     - Minimize Http requests, duplicated calls
-    - Forbid Refreshing the whole page even for a small change => Loading only the necessary resources on-demand
+
+    - Forbid Refreshing the whole page for a small change => Loading only the necessary resources on-demand
+
     - Lazy loading
+
     - Using appropriate image formats (e.g., SVG, WebP)
 
-    - ....
+    - 
 
   ### Testing 
 
@@ -55,13 +56,20 @@ To make it easy for you to get started with GitLab, here's a list of recommended
   ### Editor
 
   ### Code line length
+
     Code lines shouldn't be so long that they require horizontal scrolling to read (long lines need to be breaking)
 
 ## General Coding Rules
 
  ### Write a readable code
+
     "keep it simple, stupid"
+
+    prioritize clarity and simplicity and avoid complexity in your code to enhance readability and maintainability.
+
  ### Don't Repeat yourself (DRY)
+    
+    If you find yourself duplicating any code that has already been defined elsewhere in the codebase, take the opportunity to refactor it in a way that ensures there's only a single representation of that code throughout
 
  ### Separation of Concerns
 
@@ -179,6 +187,7 @@ Feature-based structure: In this approach, code is organized based on applicatio
     ❌ Don't work on the same branch for a long time. Each task has it is own branch
     
    ## TAM
+
     - Make sure that you have a ticket assigned to you before starting any task 
     - Make sure that your ticket has the tester and the reviewer member (code review) as watchers in your ticket.
     - Add the merge request link to your ticket
