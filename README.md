@@ -124,45 +124,45 @@ Feature-based structure: In this approach, code is organized based on applicatio
 
 ```
 /my-react-app                                                                                                                                 
-|-- /.husky                     # Husky directory to manage Git hooks
-|-- /public                     # Contains static assets like HTML files, images, etc.
-|-- /src                        # Source code for the application
-    |-- /app                    # App-level configuration and setup components
-    |-- /modules                # Feature modules for the application
-        |-- /auth               # Authentication module containing related components and logic
-        |-- /dashboard          # Dashboard module with components specific to the dashboard feature
-        |-- /shared             # Shared resources used across the entire application
-             |-- /assets        # Static files like images, fonts, etc.
-             |-- /components    # Reusable components
+|-- /.husky                                      # Husky directory to manage Git hooks
+|-- /public                                      # Contains static assets like HTML files, images, etc.
+|-- /src                                         # Source code for the application
+    |-- /app                                     # App-level configuration and setup components
+    |-- /modules                                 # Feature modules for the application
+        |-- /auth                                # Authentication module containing related components and logic
+        |-- /dashboard                           # Dashboard module with components specific to the dashboard feature
+        |-- /shared                              # Shared resources used across the entire application
+             |-- /assets                         # Static files like images, fonts, etc.
+             |-- /components                     # Reusable components
                     |-- /Button
                          |-- Button.tsx          # Button component implementation
                          |-- _Button.scss        # Styles specific to the Button component
                          |-- index.tsx           # Entry file to export the Button component
                          |-- _index.scss         # Aggregated SCSS import file for the Button component
-                    |-- index.scss              # Aggregated SCSS import file for all components
-             |-- /features      # Grouped feature-specific components
+                    |-- index.scss               # Aggregated SCSS import file for all components
+             |-- /features                       # Grouped feature-specific components
                     |-- /dashboard
                          |-- Dashboard.tsx       # Main dashboard component
                          |-- _Dashboard.scss     # Styles specific to the Dashboard component
                          |-- index.tsx           # Entry file to export the Dashboard feature component
                          |-- _index.scss         # Aggregated SCSS import file for the Dashboard feature
                     |-- index.scss               # Aggregated SCSS import file for all features
-             |-- /guards        # Route guards to manage access control
-                     |-- AuthGuard.tsx          # Guard component for authenticated routes
-                     |-- GuestGuard.tsx         # Guard component for guest-only routes
-             |-- /hooks         # Custom React hooks
-             |-- /layout        # Components related to the overall page layout
-             |-- /providers     # Context providers for state management
-             |-- /routes        # Application routing configuration
-             |-- /store         # Redux  state management store configuration
-             |-- /types         # TypeScript type definitions and interfaces
-             |-- /utils         # Utility functions
-             |-- index.scss     # Aggregated SCSS import file for all folders inside the module
-        |-- index.scss          # Aggregated SCSS import file for all fmodules
-    |-- config.ts               # Application configuration settings
-    |-- i18n.ts                 # Internationalization configuration
-    |-- main.tsx                # Main entry point for the React application
-    |-- vite-env.d.ts           # TypeScript declaration file for Vite environment variables
+             |-- /guards                         # Route guards to manage access control
+                     |-- AuthGuard.tsx           # Guard component for authenticated routes
+                     |-- GuestGuard.tsx          # Guard component for guest-only routes
+             |-- /hooks                          # Custom React hooks
+             |-- /layout                         # Components related to the overall page layout
+             |-- /providers                      # Context providers for state management
+             |-- /routes                         # Application routing configuration
+             |-- /store                          # Redux  state management store configuration
+             |-- /types                          # TypeScript type definitions and interfaces
+             |-- /utils                          # Utility functions
+             |-- index.scss                      # Aggregated SCSS import file for all folders inside the module
+        |-- index.scss                           # Aggregated SCSS import file for all fmodules
+    |-- config.ts                                # Application configuration settings
+    |-- i18n.ts                                  # Internationalization configuration
+    |-- main.tsx                                 # Main entry point for the React application
+    |-- vite-env.d.ts                            # TypeScript declaration file for Vite environment variables
 ```
 
 
