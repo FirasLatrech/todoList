@@ -7,7 +7,7 @@ export interface DeleteMemberModalProps {
   id: string
 }
 
-const ModalExample: React.FC<DeleteMemberModalProps> = ({ open, handleClose, data, id }) => {
+const ModalExample: React.FC<DeleteMemberModalProps> = ({ open, handleClose, id }) => {
   if (!open) return null
 
   return (

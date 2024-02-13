@@ -12,6 +12,7 @@ interface IInputProps extends HTMLAttributes<HTMLInputElement> {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   rounded?: boolean
   required?: boolean
+  placeholder?: string
 }
 
 const Input: React.FC<IInputProps> = ({
