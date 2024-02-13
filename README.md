@@ -122,6 +122,7 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
 Feature-based structure: In this approach, code is organized based on application features or modules. Each feature has its own folder containing all the related files, including HTML, CSS, and TypeScript. This structure helps in better separation of concerns and enables teams to work on different features independently.
 
+```
 /my-react-app                                                                                                                                 
 |-- /.husky                     # Husky directory to manage Git hooks
 |-- /public                     # Contains static assets like HTML files, images, etc.
@@ -162,6 +163,7 @@ Feature-based structure: In this approach, code is organized based on applicatio
     |-- i18n.ts                 # Internationalization configuration
     |-- main.tsx                # Main entry point for the React application
     |-- vite-env.d.ts           # TypeScript declaration file for Vite environment variables
+```
 
 
 # Git and branches
