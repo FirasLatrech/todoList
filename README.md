@@ -33,15 +33,18 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
   ### Performance
 
-    - Minimize Http requests, duplicated calls
+     - Minimize Http requests, duplicated calls
 
-    - Forbid Refreshing the whole page for a small change => Loading only the necessary resources on-demand
+    - Minimize Component Renders: Optimize your components to render only when necessary :
+      Loading only the necessary resources on-demand
 
-    - Lazy loading
+    - Lazy Loading: Utilize React.lazy and Suspense to lazily load components that are not immediately required. This can improve 
+      the perceived performance of your application by deferring the loading of non-essential components until they are needed.
+
+    - Memoization: Use memoization techniques, such as useMemo or useCallback, to memoize expensive calculations or function 
+      references. This can prevent unnecessary recalculations and improve the performance of your components.
 
     - Using appropriate image formats (e.g., SVG, WebP)
-
-    - 
 
   ### Testing 
 
