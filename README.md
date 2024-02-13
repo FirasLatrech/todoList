@@ -56,8 +56,6 @@ To make it easy for you to get started with GitLab, here's a list of recommended
    committing
   
  
-  ### Editor
-
   ### Code line length
 
     Code lines shouldn't be so long that they require horizontal scrolling to read (long lines need to be breaking)
@@ -79,6 +77,7 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 
     - Use comment only to explain some decision, architecture that cannot be explained in code
     - For information (to be refactored, ...) 
+    - keep comments brief and informative
 
 ### Code Standards Guidelines
 
@@ -752,6 +751,8 @@ const sampleComponent = () => {
 
 Feature-based structure: In this approach, code is organized based on application features or modules. Each feature has its own folder containing all the related files, including HTML, CSS, and TypeScript. This structure helps in better separation of concerns and enables teams to work on different features independently.
 
+To directly clone the project just use our command "npx create-softy-app ./{folder-name}"
+
 ```
 /my-react-app                                                                                                                                 
 |-- /.husky                                      # Husky directory to manage Git hooks
@@ -800,9 +801,10 @@ Feature-based structure: In this approach, code is organized based on applicatio
 
   ## naming
 
-    - feature branches: These branches are used for developing new features or making changes to existing features. Feature branches 
+    - feature branches: these branches are used for developing new features or making changes to existing features. Feature branches 
       should be created off of the develop branch and should be named using the following convention: feature/<feature-name>
     - hotFix branches: these branches are for hotfixes in the prod (urgent fixes) hotFix/<fix-issue>
+    - fix branches: these branches are for normal fixes 
 
   ## workflow
 
@@ -820,7 +822,6 @@ Feature-based structure: In this approach, code is organized based on applicatio
     
    ## TAM
 
-    - Make sure that you have a ticket assigned to you before starting any task 
-    - Make sure that your ticket has the tester and the reviewer member (code review) as watchers in your ticket.
-    - Add the merge request link to your ticket
-    - Make sure to daily answer the questions
+    - Ensure that you have a ticket assigned to you before starting any task 
+    - Ensure that your ticket has the tester and the reviewer (for code review) assigned as watchers
+    - Ensure you answer the daily questions 
