@@ -6,7 +6,7 @@ import axiosInstance from '../utils/axios'
 import { localStorageAdapter } from '../utils/localStorageAdapter'
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: import.meta.env.VITE_APP_BASE_URL as string,
+  baseUrl: import.meta.env['VITE_APP_BASE_URL'] as string,
   prepareHeaders: (headers) => {
     const token = localStorageAdapter.get('access_token')
     if (token) {

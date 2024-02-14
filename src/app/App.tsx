@@ -2,7 +2,7 @@ import routes, { renderRoutes } from '@src/modules/shared/routes'
 import { useAppSelector } from '@src/modules/shared/store'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
-import { AbilityContextProvider } from '@src/modules/shared/contexts/AbilityContext'
+// import { AbilityContextProvider } from '@src/modules/shared/contexts/AbilityContext'
 
 const App = () => {
   // get translation.json file from public/locales
@@ -12,7 +12,7 @@ const App = () => {
 
   const theme = useAppSelector((state) => state.theme.mode)
   const { user } = useAppSelector((state) => state?.auth);
-
+console.log(user)
   return (
     <div id={theme}>
       <Helmet>

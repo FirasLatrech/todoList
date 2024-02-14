@@ -1,7 +1,7 @@
 import { clearTokens, getTokens, setTokens } from '../../auth/utils/token'
 import axios from 'axios'
 
-const baseURL = import.meta.env.VITE_APP_BASE_URL as string
+const baseURL = import.meta.env['VITE_APP_BASE_URL'] as string
 const headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json',

@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { Ability, AbilityTuple, MongoAbility, MongoQuery } from '@casl/ability';
-import { useAppDispatch, useAppSelector } from '../store';
+import {  useAppSelector } from '../store';
 import { defineAbilitiesFor } from '../utils/defineAbilitiesFor';
 
 type AbilityContextType = {
   ability: Ability;
 };
 //get currentUser from getMe api
-const currentUser = {
+// const currentUser = {
 
-}
+// }
 const allPermissions = [
   'CREATE',
   'EDIT',
@@ -23,7 +23,7 @@ type Props = {
   children: React.ReactNode;
 };
 export const AbilityContextProvider = ({ children }: Props) => {
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const { user, status } = useAppSelector((state) => state.auth);
 
   useEffect(() => {
