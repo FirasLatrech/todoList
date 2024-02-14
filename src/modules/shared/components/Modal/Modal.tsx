@@ -6,10 +6,10 @@ export interface DeleteMemberModalProps {
   handleClose: (id: string) => void
   data?: any
   id: string
-  children?:ReactElement
+  children?: ReactElement
 }
 
-const Modal: React.FC<DeleteMemberModalProps> = ({ open, handleClose, id,children }) => {
+const Modal: React.FC<DeleteMemberModalProps> = ({ open, handleClose, id, children }) => {
   if (!open) return null
 
   return (

@@ -1,9 +1,12 @@
-version: "3.8"
-
+version: '3.8'
 services:
-  web:
+  frontend:
+    # Use the Dockerfile in the current directory to build the image
     build: .
     ports:
-      - "80:80"
+      - '${VITE_APP_PORT}:4000'
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - '.:/app' # Mount the project directory on the host to /app inside the container
+      - '/app/node_modules' # Use node_modules from inside the image
+    environment:
+      - NODE_ENV=development

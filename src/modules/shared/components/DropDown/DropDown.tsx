@@ -11,7 +11,7 @@ export interface DropdownProps {
   items: DropdownItem[]
   placement?: 'bottomRight' | 'bottomLeft'
   triggerElement?: ReactElement
-  children?:ReactElement
+  children?: ReactElement
   isOpen: boolean
   setIsOpen: any
 }
@@ -21,7 +21,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   triggerElement,
   isOpen,
   setIsOpen,
-  children
+  children,
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -40,28 +40,26 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-    {triggerElement}
-    <div className={`dropdown-menu ${placement} ${isOpen ? 'visible' : ''}`}>
-      {children ? (
-        children
-      ) : (
-        items?.map((item) => (
-          <div
-            key={item.key}
-            className={`dropdown-item ${item.disabled ? 'disabled' : ''}`}
-            onClick={() => {
-              if (!item.disabled) {
-                item.onClick();
-                setIsOpen(false);
-              }
-            }}
-          >
-            {item.icon} {item.label}
-          </div>
-        ))
-      )}
+      {triggerElement}
+      <div className={`dropdown-menu ${placement} ${isOpen ? 'visible' : ''}`}>
+        {children
+          ? children
+          : items?.map((item) => (
+              <div
+                key={item.key}
+                className={`dropdown-item ${item.disabled ? 'disabled' : ''}`}
+                onClick={() => {
+                  if (!item.disabled) {
+                    item.onClick()
+                    setIsOpen(false)
+                  }
+                }}
+              >
+                {item.icon} {item.label}
+              </div>
+            ))}
+      </div>
     </div>
-  </div>
   )
 }
 export default Dropdown

@@ -1,32 +1,21 @@
-# Base image
-FROM node:14 as builder
+# Use the official lightweight Node.js 16 image.
+# https://hub.docker.com/_/node
+FROM node:16-alpine
 
-# Working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy the package.json and package-lock.json to work directory
+COPY package.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies in the container
+RUN npm install --force
 
-# Copy app files
+# Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
-# Build the app
-RUN npm run build
+EXPOSE 4000
 
-# Production image
-FROM nginx:1.21.1-alpine
+# Run the application in prod mode
+CMD ["npm", "run", "build"]
 
-# Copy build files to nginx directory
-COPY --from=builder /app/build /usr/share/nginx/html
-
-# Copy nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Expose port 80
-EXPOSE 80
-
-# Start nginx server
-CMD ["nginx", "-g", "daemon off;"]

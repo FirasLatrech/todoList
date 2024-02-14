@@ -14,7 +14,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "generate-component": "ts-node cli.ts"
+    "generate-component": "ts-node cli.ts",
+    "docker:build": "./scripts/build-docker.sh"
   },
   "dependencies": {
     "@casl/ability": "^6.5.0",
