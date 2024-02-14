@@ -11,8 +11,11 @@ const Test = () => {
   const [updateUser] = useUpdateUserMutation()
 
   console.log({ users, user, isLoading, isError, isSuccess })
+  const updateUserHnadler = () => {
+    updateUser('test')
+  }
 
-  return <div onClick={() => updateUser('test')}>Test</div>
+  return <div onClick={updateUserHnadler}>Test</div>
 }
 
 export default Test

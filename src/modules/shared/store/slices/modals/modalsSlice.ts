@@ -2,7 +2,6 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 const initialState: ModalsState = {
   'example-modal': { open: false },
-  
 }
 
 export const modalsSlice = createSlice({
@@ -11,13 +10,11 @@ export const modalsSlice = createSlice({
   reducers: {
     openModal: (state, action: PayloadAction<openModalPayload>) => {
       const { id, data } = action.payload
-      if(!state) return;
-      state[id].open = true
-      state[id].data = data
+      state[id] = { open: true, data }
     },
     closeModal: (state, action: PayloadAction<closeModalPayload>) => {
       const { id } = action.payload
-      state[id].open = false
+      state[id] = { open: false }
     },
   },
 })

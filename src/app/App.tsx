@@ -11,8 +11,8 @@ const App = () => {
   document.body.dir = i18n?.dir()
 
   const theme = useAppSelector((state) => state.theme.mode)
-  const { user } = useAppSelector((state) => state?.auth);
-console.log(user)
+  const { user } = useAppSelector((state) => state?.auth)
+  console.log(user)
   return (
     <div id={theme}>
       <Helmet>
@@ -20,8 +20,8 @@ console.log(user)
       </Helmet>
       {/* add AbilityProvider if needed
       <AbilityContextProvider roles={user?.roles}> */}
-                  {renderRoutes(routes)}
-        {/* </AbilityContextProvider> */}
+      {renderRoutes(routes)}
+      {/* </AbilityContextProvider> */}
     </div>
   )
 }

@@ -6,7 +6,7 @@ interface ILazyLoadProps {
   showSpinner?: boolean
 }
 
-const LazyLoad: React.FC<ILazyLoadProps> = ({ showSpinner=false }) => {
+const LazyLoad: React.FC<ILazyLoadProps> = ({ showSpinner = false }) => {
   useEffect(() => {
     NProgress.configure({ showSpinner })
     NProgress.start()
