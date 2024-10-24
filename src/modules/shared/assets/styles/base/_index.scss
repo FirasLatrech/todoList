@@ -24,6 +24,7 @@ html {
   scroll-padding-top: 5rem;
   overflow-x: hidden;
   font-size: 107.5%;
+  height: 100vh;
 
   text-size-adjust: none;
 
@@ -42,4 +43,46 @@ html {
     background-clip: padding-box;
     border-radius: 5px;
   }
+}
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: $spacing-sm $spacing-md;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &-primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &-danger {
+    background-color: $danger-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
 }

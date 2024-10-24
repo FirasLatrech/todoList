@@ -14,7 +14,12 @@ const routes: RouteConfig[] = [
   {
     exact: true,
     path: '*',
-    component: lazy(() => import('../features/NotFound/NotFound')),
+    component: lazy(() => import('../../dashboard/features/dashboard')),
+  },
+  {
+    exact: true,
+    path: 'dashboard',
+    component: lazy(() => import('../../dashboard/features/dashboard')),
   },
 ]
 

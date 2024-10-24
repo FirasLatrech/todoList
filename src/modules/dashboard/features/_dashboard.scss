@@ -1,0 +1,40 @@
+@use '../../shared/assets/styles/abstracts/colors' as *;
+
+.container-wrapper {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  inset: 0;
+  background: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 16px 16px;
+
+  .blurred-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    height: 500px;
+    width: 500px;
+    transform: translateX(-30%) translateY(20%);
+    border-radius: 50%;
+    background-color: rgba(173, 109, 244, 0.5);
+    opacity: 0.5;
+    filter: blur(80px);
+    z-index: -1;
+  }
+}
+.container {
+  display: flex;
+  width: 100%;
+  padding: $spacing-md;
+  .app-grid {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    width: 100%;
+  }
+}

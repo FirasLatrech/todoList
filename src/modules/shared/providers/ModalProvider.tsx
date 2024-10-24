@@ -1,4 +1,4 @@
-import ModalExample from '@src/modules/dashboard/components/ModalExample'
+import TodoDeatilsModal from '@src/modules/dashboard/components/TodoDeatilsModal'
 import { useAppDispatch, useAppSelector } from '../store'
 import { closeModal } from '../store/slices/modals/modalsSlice'
 
@@ -20,11 +20,11 @@ function ModalsProvider() {
 
   return (
     <>
-      {ModalIsOpen('example-modal', modals) && (
-        <ModalExample
-          id="example-modal"
-          open={modalState('example-modal', 'open')}
-          data={modalState('example-modal', 'data')}
+      {ModalIsOpen('todo-details-modal', modals) && (
+        <TodoDeatilsModal
+          id="todo-details-modal"
+          open={modalState('todo-details-modal', 'open')}
+          data={modalState('todo-details-modal', 'data')}
           handleClose={handleClose}
         />
       )}

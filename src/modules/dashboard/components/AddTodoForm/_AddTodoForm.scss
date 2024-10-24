@@ -1,0 +1,49 @@
+@use '../../../shared/assets/styles/abstracts' as *;
+
+.add-todo-form {
+  margin-bottom: $spacing-md;
+
+  form {
+    display: flex;
+    gap: $spacing-sm;
+
+    input[type='text'] {
+      flex-grow: 1;
+      padding: $spacing-sm;
+      border: 1px dashed #00000082;
+      border-radius: 0.25rem;
+    }
+
+    select {
+      padding: $spacing-sm;
+      border: 1px dashed #00000082;
+      border-radius: 0.25rem;
+    }
+
+    input[type='color'] {
+      padding: 0;
+      border: none;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.25rem;
+    }
+    .color-picker {
+      padding: 0;
+      border: 1px dashed #00000082;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.25rem;
+    }
+    .add-todo-button {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      border: 1px dashed #00000082;
+      padding: $spacing-sm $spacing-md;
+      background-color: transparent;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}

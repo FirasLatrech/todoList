@@ -18,7 +18,7 @@ const routes: RouteConfig[] = [
     exact: true,
     // guard: AuthGuard,
     path: '/dashboard',
-    component: lazy(() => import('../features/Test')),
+    component: lazy(() => import('../features/dashboard')),
     layout: MainLayout,
   },
 ]

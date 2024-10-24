@@ -3,22 +3,20 @@
 import { FetchArgs, createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
 import { clearTokens, setTokens } from '@src/modules/auth/utils/token'
 import axiosInstance from '../utils/axios'
-import { localStorageAdapter } from '../utils/localStorageAdapter'
 
 const baseQuery = fetchBaseQuery({
   baseUrl: import.meta.env['VITE_APP_BASE_URL'] as string,
-  prepareHeaders: (headers) => {
-    const token = localStorageAdapter.get('access_token')
-    if (token) {
-      headers.set('Authorization', `Bearer ${token}`)
-    }
-    return headers
-  },
+  //   prepareHeaders: (headers) => {
+  //     const token = localStorageAdapter.get('access_token')
+  //     if (token) {
+  //       headers.set('Authorization', `Bearer ${token}`)
+  //     }
+  //     return headers
+  //   },
 })
 
 const staggeredBaseQueryWithBailOut = retry(async (args: string | FetchArgs, api, extraOptions) => {
   const result = await baseQuery(args, api, extraOptions)
-  console.log({ result })
   if (result.error) {
     if (result.error.status === 401) {
       try {
@@ -36,7 +34,6 @@ const staggeredBaseQueryWithBailOut = retry(async (args: string | FetchArgs, api
     }
     retry.fail(result.error?.data)
   }
-
   return result
 })
 

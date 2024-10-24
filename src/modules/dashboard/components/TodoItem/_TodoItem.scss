@@ -1,0 +1,84 @@
+@use '../../../shared/assets/styles/abstracts' as *;
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-sm;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $background-color;
+    border-radius: 10px;
+  }
+  .todo-content {
+    display: flex;
+    align-items: center;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .todo-name {
+    flex-grow: 1;
+    margin-right: $spacing-md;
+
+    &.completed {
+      text-decoration: line-through;
+      color: lighten($text-color, 30%);
+    }
+  }
+  .edit-input {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    // border-top: 1px solid $border-color;
+    border-bottom: 1px solid #00000080;
+    border-radius: 0;
+  }
+  .todo-actions {
+    display: flex;
+    gap: $spacing-sm;
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px dashed #00000080;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    button {
+      background: none;
+      padding: 7px;
+      border: 1px dashed black;
+      border-radius: 50%;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: #eee8fc;
+        transition: background-color 0.3s ease;
+      }
+
+      &.edit {
+        color: $primary-color;
+      }
+
+      &.delete {
+        color: $danger-color;
+      }
+    }
+  }
+}
+.todo-color-badge {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px dashed;
+  margin-right: 10px;
+}

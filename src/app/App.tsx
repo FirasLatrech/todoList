@@ -11,8 +11,6 @@ const App = () => {
   document.body.dir = i18n?.dir()
 
   const theme = useAppSelector((state) => state.theme.mode)
-  const { user } = useAppSelector((state) => state?.auth)
-  console.log(user)
   return (
     <div id={theme}>
       <Helmet>
