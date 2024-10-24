@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 const dbName = "todos_db";
-
+// THIS FOR TESTING PURPOSES ONLY
 const uri =
     "mongodb+srv://firaslatrach:QQ61U0AakTtkhoa0@todoapp.rh1t3.mongodb.net/?retryWrites=true&w=majority&appName=TodoApp";
 
